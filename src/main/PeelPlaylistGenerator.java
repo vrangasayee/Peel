@@ -10,6 +10,7 @@ import parser.GsonParser;
 public class PeelPlaylistGenerator {
 	private static final String THANKYOU = "Thank you for using playlist generator";
 	private static final String LOOKUP_PROMPT = "Enter Lookup value: (Enter 'quit' to quit)";
+	private static final String ERRORSTRING = "Error parsing JSON file";;
 	private String contentName = "";
 	private String country = "" ;
 	
@@ -56,8 +57,8 @@ public class PeelPlaylistGenerator {
 			
 		} catch (EOFException ee) {
 			System.out.println(THANKYOU);
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println(ERRORSTRING);
 		}
 		
 		

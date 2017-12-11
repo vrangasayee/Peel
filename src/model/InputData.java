@@ -6,11 +6,12 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class InputData {
-	private static final String MISSING_CONTENT = "Cannot find content with name ";;
+	private static final String MISSING_CONTENT = "Cannot find content with name ";
+	private static final String EMPTY_MESSAGE = "No legal playlist possible because the Pre-Roll Video isn't\n" + 
+			"compatible with the aspect ratio of the Content Video for ";
 	private ArrayList<Content> content;
 	private ArrayList<Preroll> preroll;
-	private final String EMPTY_MESSAGE = "No legal playlist possible because the Pre-Roll Video isn't\n" + 
-			"compatible with the aspect ratio of the Content Video for ";
+	
 	
 	public ArrayList<Content> getContents() {
 		return content;
